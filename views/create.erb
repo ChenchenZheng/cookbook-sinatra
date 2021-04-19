@@ -1,0 +1,13 @@
+<form action="/recipes" method="post">
+  <h1>Add a new recipe in my cookbook</h1>
+  <p>Name: <input id="name" name="Name" type="text"></p>
+  <p>Description: <input id="description" name="Description" type="text"></p>
+  <p>Rating: <input id="rating" name="Rating" type="number" min="1" max="5"></p>
+  <p>Preptime: <input id="preptime" name="Preptime" type="text"></p>
+  <p>Done or not:
+    <select id="done" name="Done">
+    <option value="false">False</option>
+    <option value="true">True</option>
+    </select></p>
+  <input type="submit" value="Save to my cookbook">
+</form>

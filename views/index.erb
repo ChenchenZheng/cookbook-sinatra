@@ -1,0 +1,5 @@
+<% @recipes.each do |recipe| %>
+  <li>Nom de la recette : <%= recipe.name %> Description de la recette : <%= recipe.description %> Note : <%= recipe.rating %> / 5</li>
+<% end %>
+
+<a href="/new">Create a new recette</a>
