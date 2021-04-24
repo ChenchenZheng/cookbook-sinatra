@@ -1,5 +1,6 @@
-<% @recipes.each do |recipe| %>
-  <li>Nom de la recette : <%= recipe.name %> Description de la recette : <%= recipe.description %> Note : <%= recipe.rating %> / 5</li>
+<% @recipes.each_with_index do |recipe, index| %>
+  <p><%= index +1 %> : Nom de la recette : <%= recipe.name %> Description de la recette : <%= recipe.description %> Note : <%= recipe.rating %> / 5</p>
+  <a href="/delete/<%= index + 1%>">Delete this recipe</a>
 <% end %>
 
 <a href="/new">Create a new recette</a>
