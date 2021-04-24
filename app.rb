@@ -34,8 +34,9 @@ post '/recipes' do
   erb :index
 end
 
-delete '/recipe/<%= index %>' do
+delete '/recipe/:index' do
+  index = params[:index].to_i
   cookbook.remove_recipe(index)
-  redirect '/'
+  redirect to '/'
   erb :index
 end
